@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --error-color: #e74c3c;
+    --background-color: #f5f6fa;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+input, select {
+    width: 300px;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.success {
+    color: var(--success-color);
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: rgba(39, 174, 96, 0.1);
+    border: 1px solid var(--success-color);
+    margin-top: 20px;
+}
+
+.error {
+    color: var(--error-color);
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid var(--error-color);
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+/* Add some animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#result {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Group styling */
+h2 {
+    margin-top: 30px;
+    color: var(--secondary-color);
+    font-size: 1.5em;
+}
+
+/* Custom styling for specific elements */
+#predictionForm {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Hover effects for interactive elements */
+input:hover, select:hover {
+    border-color: var(--secondary-color);
+}
+
+/* Add icons to sections */
+h2::before {
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+h2:contains("Personal Details")::before {
+    content: "👤";
+}
+
+h2:contains("Financial Details")::before {
+    content: "💰";
+}
+
+h2:contains("Loan Details")::before {
+    content: "📝";
+} 
